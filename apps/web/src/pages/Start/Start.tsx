@@ -22,9 +22,9 @@ export const defaultConfig: UserConfig = {
   monitor: {
     delay: 0,
     presetAddress: [{
-      lon: '113.516288',
-      lat: '34.817038',
-      address: '安徽省蚌埠市蚌埠坦克学院'
+      lon: '120.136018',
+      lat: '36.007867',
+      address: '山东省青岛市黄岛区前湾港路579号山东科技大学J13教学楼'
     }]
   },
   mailing: {
@@ -38,9 +38,9 @@ export const defaultConfig: UserConfig = {
   },
   cqserver: {
     cq_enabled: false,
-    ws_url: 'ws://127.0.0.1:8080',
+    ws_url: 'ws://127.0.0.1:6700',
     target_type: 'private',
-    target_id: 1001
+    target_id: 1528344561
   }
 };
 

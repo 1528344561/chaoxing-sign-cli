@@ -66,7 +66,7 @@ const PromptsOptions = {
     case 2: {
       // 二维码签到
       const { enc } = await prompts({ type: 'text', name: 'enc', message: 'enc(微信或其他识别二维码，可得enc参数)' }, PromptsOptions);
-      const defaultLngLat = configs.monitor?.lon ? `${configs.monitor.lon},${configs.monitor.lat}` : '113.516288,34.817038';
+      const defaultLngLat = configs.monitor?.lon ? `${configs.monitor.lon},${configs.monitor.lat}` : '120.136018,36.007867';
       const defaultAddress = configs.monitor?.address ? configs.monitor.address : '';
       const { lnglat } = await prompts({ type: 'text', name: 'lnglat', message: '经纬度', initial: defaultLngLat }, PromptsOptions);
       const { address } = await prompts({ type: 'text', name: 'address', message: '详细地址', initial: defaultAddress });
@@ -94,7 +94,7 @@ const PromptsOptions = {
           type: 'text',
           name: 'lon_lat_address',
           message: '位置参数预设（经纬度/地址）',
-          initial: '113.516288,34.817038/河南省郑州市万科城大学软件楼',
+          initial: '120.136018,36.007867/河南省郑州市万科城大学软件楼',
         }, PromptsOptions);
         lon_lat_address = result.match(/([\d.]*),([\d.]*)\/(\S*)/);
         configs.monitor.presetAddress.push({

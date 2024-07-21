@@ -204,7 +204,10 @@ async function handleMsg(this: CQ, data: string) {
     const params = this.getCache('params');
     const qr_str = (await QrCodeScan(img_url, 'url')).CodeResults?.[0].Url;
 
-    if (typeof qr_str === 'undefined') this.send('是否已配置腾讯云OCR？图像是否包含清晰二维码？', this.getTargetID());
+    // if (typeof qr_str === 'undefined') this.send('是否已配置腾讯云OCR？图像是否包含清晰二维码？', this.getTargetID());
+    if (typeof qr_str === 'undefined'){
+      
+    }
     else {
       params.enc = qr_str.match(/(?<=&enc=)[\dA-Z]+/)?.[0];
       const result = await QRCodeSign(params);
